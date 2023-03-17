@@ -10,3 +10,7 @@ CSS
 Javascript
 
 **Note:- Here I used Bootstap . That uses CSS and Javascript along with HTML. So there is no other .css or .js file.**
+
+
+# Basic Interface of the app 
+
