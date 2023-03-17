@@ -4,14 +4,23 @@ This is a basic hostel mealcounting app.For a normal hostel meal counting system
 
 # Languages Used 
 
-Python 
+Python (As it is a flask app)
 HTML
 CSS
 Javascript
 
 **Note:- Here I used Bootstap . That uses CSS and Javascript along with HTML. So there is no other .css or .js file.**
 
+# IDLE's used 
+
+vsCode (install from here - https://code.visualstudio.com/
+
 
 # Basic Interface of the app 
 
 ![Screenshot 2023-03-17 220551](https://user-images.githubusercontent.com/104966547/225965972-55b4e79d-9228-4169-9636-424ff1243cec.png)
+
+![Screenshot 2023-03-17 221152](https://user-images.githubusercontent.com/104966547/225966439-9cbbc5c9-5ec1-4be9-885b-75959ffe576e.png)
+
+
+# How to Use
