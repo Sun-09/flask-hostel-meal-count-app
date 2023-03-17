@@ -46,6 +46,12 @@ Here the basic data flow is given in the diagram :-
 
 The structure of a flask based web app is given below:-
 
+**Client:** It is a generally a web-browser where we input the data. Client request to the server using get or post methods...
+
+**Server:** It is generally a virtual system where all the data of user is stored. When it necessary user can request the data to get back.
+
+**Flask API** Client and Server is connected with the Flask API.
+
 
 
 
