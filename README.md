@@ -38,6 +38,11 @@ vsCode (install from here - https://code.visualstudio.com/
 4. You can update and delete your existing meal count
 5. You can see border's list who are appling for meal(lunch & Dinner)
 
+# How it works
+
+Here the basic data flow is given in the diagram :- 
+
+
 # Why use Flask
 
 Flask is a popular web framework in Python used for building web applications and APIs. It is lightweight, flexible, and easy to use, which makes it an ideal choice for building backend systems.
