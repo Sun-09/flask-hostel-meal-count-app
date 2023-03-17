@@ -71,5 +71,9 @@ Here are some reasons why Flask is commonly used for backend development:
 
 **Integration:** Flask integrates well with other Python libraries and tools, making it easy to build complex applications with a variety of different components.
 
-**Overall, Flask is a powerful tool for backend development in Python, offering simplicity, flexibility, and scalability for a wide range of use cases.**
+**Overall, Flask is a powerful tool for backend development in Python, offering simplicity, flexibility, and scalability for a wide range of use cases.There are several companies using flask framework**
+
+
+
+
 
