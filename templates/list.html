@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title%} View {% endblock title%}
+
+{% block body%}
+
+<div class="container my-3">
+    <h1 style="text-align:center;padding:20px">Meal Counts</h1>
+    
+          
+             <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Lunch</th>
+                  <th scope="col">Borders(Lunch)</th>
+                  <th scope="col">Dinner</th>
+                  <th scope="col">Borders(Dinner)</th>
+                  <th scope="col">Time</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+          
+          
+          <tr>
+            <td>{{todo.desc}}</td>
+            <td>{{todo.lunch}}</td>
+            <td>{{todo.desc2}}</td>
+            <td>{{todo.dinner}}</td>
+            <td>{{todo.date_created}}</td>
+            
+          </tr>
+
+          
+          
+          
+        </tbody>
+      </table>
+  </div>
+
+  <h1 style="text-align:center; padding:40px;opacity:0.3;font-size:1.5rem">@SONU</h1>
+
+{% endblock body %}

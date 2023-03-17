@@ -6,32 +6,32 @@
     
 
     
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-              <img src="https://th.bing.com/th/id/R.5c1cb9376b3bee7effa4286fbc6ef4ba?rik=KimYjCSDB1u4jg&riu=http%3a%2f%2fs1.picswalls.com%2fwallpapers%2f2016%2f03%2f29%2fawesome-beautiful-nature-wallpaper_042319501_304.jpg&ehk=8bGUOKnA5IrfEG%2foi23atcc7xm8BmgDPkLvJhn94JwA%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="..." width="400px" height="400px">
-          </div>
-          <div class="carousel-item">
-            <img src="https://wallpapercave.com/wp/wp2858563.jpg" class="d-block w-100" alt="..." width="400px" height="400px">
-          </div>
-          <div class="carousel-item">
-            <img src="https://th.bing.com/th/id/R.d58339de61b5d07fd4db988f8e8a7cdd?rik=1%2fUoNcqqIfTiXw&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f01%2fnature-images..jpg&ehk=%2fG27fwqbQI%2fi%2bxgGclM1BHuObngpvsp27tc36F59T9c%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="..." width="400px" height="400px">
-          </div>
-        </div>
-      </div>
+     
 
       <div class="container">
         <h1 style="text-align:center;padding:20px">Update MealCount</h1>
         <form action="/update/{{todo.sno}}" method="POST">
             
             <div class="form-group">
-            <label for="title" class="form-label">Meal Count Name</label>
-            <input type="text" class="form-control" name="title" id="exampleInputEmail1" value="{{todo.title}}" aria-describedby="emailHelp" placeholder="Enter Title">
+            <label for="title" class="form-label">Room no</label>
+            <input type="text" class="form-control" name="title" id="exampleInputEmail1" value="{{todo.title}}" aria-describedby="emailHelp" placeholder="Enter Room no">
             
             </div>
             <div class="form-group">
-            <label for="desc">Meal Count</label>
-            <input type="text" class="form-control" value="{{todo.desc}}" name="desc" id="exampleInputPassword1" placeholder="Enter Description">
+            <label for="desc">Meal Count(Lunch)</label>
+            <input type="text" class="form-control" value="{{todo.desc}}" name="desc" id="exampleInputPassword1" placeholder="Enter Lunch Count">
+            </div>
+            <div class="form-group">
+              <label for="desc">Border's Name for Lunch</label>
+              <input type="text" class="form-control" value="{{todo.lunch}}" name="lunch" id="exampleInputPassword1" placeholder="Enter Border's Name for Lunch">
+            </div>
+            <div class="form-group">
+              <label for="desc">Meal Count(Dinner)</label>
+              <input type="text" class="form-control" value="{{todo.desc2}}" name="desc2" id="exampleInputPassword1" placeholder="Enter Dinner Count">
+            </div>
+            <div class="form-group">
+              <label for="desc">Border's Name for Dinner</label>
+              <input type="text" class="form-control" value="{{todo.dinner}}" name="dinner" id="exampleInputPassword1" placeholder="Enter Border's Name for Dinner">
             </div>
             <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">

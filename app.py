@@ -13,7 +13,9 @@ class Todo(db.Model):
     sno = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(200), nullable = False)
     desc = db.Column(db.String(500), nullable = True)
+    lunch = db.Column(db.String(500), nullable = True)
     desc2 = db.Column(db.String(500), nullable = True)
+    dinner = db.Column(db.String(500), nullable = True)
     date_created = db.Column(db.DateTime, default = datetime.utcnow)
 
     def __repr__(self) -> str:
@@ -28,7 +30,9 @@ def hello_world():
         title = request.form['title']
         desc = request.form['desc']
         desc2 = request.form['desc2']
-        todo = Todo(title=title, desc=desc, desc2=desc2)
+        lunch = request.form['lunch']
+        dinner = request.form['dinner']
+        todo = Todo(title=title, desc=desc, desc2=desc2, lunch = lunch, dinner = dinner)
         db.session.add(todo)
         db.session.commit()
     allTodo = Todo.query.all()
@@ -46,9 +50,15 @@ def update(sno):
     if request.method=='POST':
         title = request.form['title']
         desc = request.form['desc']
+        desc2 = request.form['desc2']
+        lunch = request.form['lunch']
+        dinner = request.form['dinner']
         todo = Todo.query.filter_by(sno=sno).first()
         todo.title = title
         todo.desc = desc
+        todo.desc2 = desc2
+        todo.lunch = lunch
+        todo.dinner = dinner
         db.session.add(todo)
         db.session.commit()
         return redirect("/")
@@ -62,6 +72,12 @@ def delete(sno):
     db.session.delete(todo)
     db.session.commit()
     return redirect("/")
+
+@app.route("/list/<int:sno>", methods = ['GET', 'POST'])
+def show(sno):
+    todo = Todo.query.filter_by(sno = sno).first()
+ 
+    return render_template('list.html', todo = todo)
 
 
 
