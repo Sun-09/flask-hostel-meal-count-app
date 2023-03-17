@@ -24,3 +24,12 @@ vsCode (install from here - https://code.visualstudio.com/
 
 
 # How to Use
+
+*It is a very easy to use web application with basic features -*
+
+1. First we have to Enter Room no, Lunch and Dinner;s meal count, Border's name for lunch and Dinner and submit.
+2. Then it will be shown as a table.( Border's name will not shown)
+3. You can add as many number of meal count as you want.
+4. You can update and delete your existing meal count
+5. You can see border's list who are appling for meal(lunch & Dinner)
+
