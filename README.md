@@ -25,7 +25,7 @@ vsCode (install from here - https://code.visualstudio.com/
 
 # How to Use
 
-*It is a very easy to use web application with basic features -*
+**It is a very easy to use web application with basic features -**
 
 1. First we have to Enter Room no, Lunch and Dinner;s meal count, Border's name for lunch and Dinner and submit.
 2. Then it will be shown as a table.( Border's name will not shown)
