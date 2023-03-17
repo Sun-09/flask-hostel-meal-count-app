@@ -21,13 +21,13 @@ class Todo(db.Model):
     def __repr__(self) -> str:
         return f"{self.sno} - {self.title}"
 
-
-
+# Login Page
 
 @app.route("/", methods = ['GET', 'POST'])
-def hello_world():
+def login_user():
     if request.method=='POST':
-        title = request.form['title']
+        title = request.form['room']
+        password = request.form['password']
         desc = request.form['desc']
         desc2 = request.form['desc2']
         lunch = request.form['lunch']
@@ -35,33 +35,38 @@ def hello_world():
         todo = Todo(title=title, desc=desc, desc2=desc2, lunch = lunch, dinner = dinner)
         db.session.add(todo)
         db.session.commit()
+        return redirect("/home")
+
+        
+    
+    return render_template('login.html')
+
+# Home Page
+
+@app.route("/home", methods = ['GET', 'POST'])
+def hello_world():
+   
     allTodo = Todo.query.all()
     return render_template('index.html', allTodo=allTodo)
 
 
-@app.route("/show")
-def prouducts():
-    allTodo = Todo.query.all()
-    print(allTodo)
-    return "<p>This is products page!</p>"
+
 
 @app.route("/update/<int:sno>", methods = ['GET', 'POST'])
 def update(sno):
     if request.method=='POST':
-        title = request.form['title']
         desc = request.form['desc']
         desc2 = request.form['desc2']
         lunch = request.form['lunch']
         dinner = request.form['dinner']
         todo = Todo.query.filter_by(sno=sno).first()
-        todo.title = title
         todo.desc = desc
         todo.desc2 = desc2
         todo.lunch = lunch
         todo.dinner = dinner
         db.session.add(todo)
         db.session.commit()
-        return redirect("/")
+        return redirect("/home")
         
     todo = Todo.query.filter_by(sno=sno).first()
     return render_template('update.html', todo=todo)
@@ -71,7 +76,7 @@ def delete(sno):
     todo = Todo.query.filter_by(sno = sno).first()
     db.session.delete(todo)
     db.session.commit()
-    return redirect("/")
+    return redirect("/home")
 
 @app.route("/list/<int:sno>", methods = ['GET', 'POST'])
 def show(sno):
