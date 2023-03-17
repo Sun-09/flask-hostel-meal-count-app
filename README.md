@@ -40,7 +40,13 @@ vsCode (install from here - https://code.visualstudio.com/
 
 # How it works
 
-Here the basic data flow is given in the diagram :- 
+Here the basic data flow is given in the diagram :-
+
+![b412162f2577d8fdb378fe74fd6cdf18](https://user-images.githubusercontent.com/104966547/225976320-0d2003f2-eb6a-4c07-a52b-931f0d91422a.png)
+
+The structure of a flask based web app is given below:-
+
+
 
 
 # Why use Flask
