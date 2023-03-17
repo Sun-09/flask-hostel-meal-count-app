@@ -1,3 +1,8 @@
+![flask-intro](https://user-images.githubusercontent.com/104966547/225973711-622de3d2-0740-4441-b654-f3e30fe4272d.jpg)
+
+
+
+
 # Hostel meal counting app
 
 This is a basic hostel mealcounting app.For a normal hostel meal counting system one person is assigned to take meal count of every room's of hostel. This takes burden of that person and he had to go every room in the hostel and ask the number of person will eat in the hostel in next day. This is a time-consuming process. That's why I built the app that helps us to get rid of the problem.
