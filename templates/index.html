@@ -25,14 +25,26 @@
         <form action="/" method="POST">
             
             <div class="form-group">
-            <label for="title" class="form-label">Meal Count Name</label>
-            <input type="text" class="form-control" name="title" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title">
+            <label for="title" class="form-label">Room no</label>
+            <input type="text" class="form-control" name="title" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Room no">
             
             </div>
             <div class="form-group">
-            <label for="desc">Meal Count</label>
-            <input type="text" class="form-control" name="desc" id="exampleInputPassword1" placeholder="Enter Description">
+            <label for="desc">Meal Count(Lunch)</label>
+            <input type="text" class="form-control" name="desc" id="exampleInputPassword1" placeholder="Enter Lunch Count">
             </div>
+            <div class="form-group">
+              <label for="desc">Border's Name for Lunch</label>
+              <input type="text" class="form-control" name="lunch" id="exampleInputPassword1" placeholder="Enter Border's Name for Lunch">
+            </div>
+            <div class="form-group">
+              <label for="desc">Meal Count(Dinner)</label>
+              <input type="text" class="form-control" name="desc2" id="exampleInputPassword1" placeholder="Enter Dinner count">
+              </div>
+              <div class="form-group">
+                <label for="desc">Border's Name for Dinner</label>
+                <input type="text" class="form-control" name="dinner" id="exampleInputPassword1" placeholder="Enter Border's name for Dinner">
+              </div>
             <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -54,8 +66,9 @@
                   <thead>
                     <tr>
                       <th scope="col">Sno</th>
-                      <th scope="col">Title</th>
-                      <th scope="col">Description</th>
+                      <th scope="col">Room no</th>
+                      <th scope="col">Lunch</th>
+                      <th scope="col">Dinner</th>
                       <th scope="col">Time</th>
                       <th scope="col">Actions</th>
                     </tr>
@@ -67,10 +80,12 @@
                 <th scope="row">{{loop.index}}</th>
                 <td>{{todo.title}}</td>
                 <td>{{todo.desc}}</td>
+                <td>{{todo.desc2}}</td>
                 <td>{{todo.date_created}}</td>
                 <td>
                   <a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-2">Delete</button>
                   <a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-2">Update</button>
+                  <a href="/list/{{todo.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-2">See List</button>
 
                   </td>
               </tr>
