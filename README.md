@@ -38,5 +38,21 @@ vsCode (install from here - https://code.visualstudio.com/
 4. You can update and delete your existing meal count
 5. You can see border's list who are appling for meal(lunch & Dinner)
 
-# How It Works 
+# Why use Flask
+
+Flask is a popular web framework in Python used for building web applications and APIs. It is lightweight, flexible, and easy to use, which makes it an ideal choice for building backend systems.
+
+Here are some reasons why Flask is commonly used for backend development:
+
+**Simplicity:** Flask is simple and easy to learn, making it ideal for beginners to get started with backend development.
+
+**Flexibility:** Flask is a micro-framework, which means it is lightweight and has minimal dependencies. This makes it highly flexible and allows developers to add or remove features based on their specific needs.
+
+**Extensibility:** Flask has a large number of extensions and plugins available, which makes it easy to add additional functionality such as authentication, database connectivity, and more.
+
+**Scalability:** Flask applications can be easily scaled horizontally by running multiple instances of the same application behind a load balancer.
+
+**Integration:** Flask integrates well with other Python libraries and tools, making it easy to build complex applications with a variety of different components.
+
+**Overall, Flask is a powerful tool for backend development in Python, offering simplicity, flexibility, and scalability for a wide range of use cases.**
 
