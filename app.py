@@ -21,13 +21,31 @@ class Todo(db.Model):
     def __repr__(self) -> str:
         return f"{self.sno} - {self.title}"
 
+
+class Password(db.Model):
+    sno = db.Column(db.Integer, primary_key = True)
+    room = db.Column(db.String(500), nullable = True)
+    Password = db.Column(db.String(500), nullable = True)
+
+@app.route("/register", methods = ['GET', 'POST'])
+def register():
+    if request.method=='POST':
+        password = request.form['password']
+        room = request.form['room']
+        passw = Password(room = room, Password = password)
+        db.session.add(passw)
+        db.session.commit()
+        return redirect("/")
+    return render_template('registration.html')
+
 # Login Page
 
 @app.route("/", methods = ['GET', 'POST'])
 def login_user():
     if request.method=='POST':
-        title = request.form['room']
         password = request.form['password']
+        room = request.form['room']
+        title = request.form['room']
         desc = request.form['desc']
         desc2 = request.form['desc2']
         lunch = request.form['lunch']
@@ -50,7 +68,7 @@ def hello_world():
     return render_template('index.html', allTodo=allTodo)
 
 
-
+# Update Page
 
 @app.route("/update/<int:sno>", methods = ['GET', 'POST'])
 def update(sno):
@@ -71,12 +89,16 @@ def update(sno):
     todo = Todo.query.filter_by(sno=sno).first()
     return render_template('update.html', todo=todo)
 
+# delete Route
+
 @app.route("/delete/<int:sno>")
 def delete(sno):
     todo = Todo.query.filter_by(sno = sno).first()
     db.session.delete(todo)
     db.session.commit()
     return redirect("/home")
+
+# List Route
 
 @app.route("/list/<int:sno>", methods = ['GET', 'POST'])
 def show(sno):
