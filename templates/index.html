@@ -38,7 +38,7 @@
                 <td>{{todo.desc2}}</td>
                 <td>{{todo.date_created}}</td>
                 <td>
-                  <a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-2">Delete</button>
+                  <a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-2" name="delete">Delete</button>
                   <a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-2">Update</button>
                   <a href="/list/{{todo.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-2">See List</button>
 
@@ -79,6 +79,11 @@ if (alertTrigger) {
   alertTrigger.addEventListener('click', () => {
     alert('Thanks for Confirming', 'Meal Count added Successfully')
   })
+
+
+
 }
+
+
     </script>
 {% endblock body %}

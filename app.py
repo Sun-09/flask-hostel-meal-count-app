@@ -70,7 +70,8 @@ def login_user():
 def hello_world():
    
     allTodo = Todo.query.all()
-    return render_template('index.html', allTodo=allTodo)
+    allpass = Todo.query.all()
+    return render_template('index.html', allTodo=allTodo, allpass = allpass)
 
 
 # Update Page
@@ -82,14 +83,17 @@ def update(sno):
         desc2 = request.form['desc2']
         lunch = request.form['lunch']
         dinner = request.form['dinner']
+        password = request.form['password']
         todo = Todo.query.filter_by(sno=sno).first()
+        passw = Password.query.filter_by(room = todo.title).first()
         todo.desc = desc
         todo.desc2 = desc2
         todo.lunch = lunch
         todo.dinner = dinner
-        db.session.add(todo)
-        db.session.commit()
-        return redirect("/home")
+        if(password == passw.Password):
+            db.session.add(todo)
+            db.session.commit()
+            return redirect("/home")
         
     todo = Todo.query.filter_by(sno=sno).first()
     return render_template('update.html', todo=todo)
@@ -114,4 +118,4 @@ def show(sno):
 
 
 if __name__ == "__main__":
-    app.run(debug=False, port=8000)  
+    app.run(debug=True, port=8000)  
