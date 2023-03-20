@@ -45,15 +45,20 @@ def login_user():
     if request.method=='POST':
         password = request.form['password']
         room = request.form['room']
-        title = request.form['room']
-        desc = request.form['desc']
-        desc2 = request.form['desc2']
-        lunch = request.form['lunch']
-        dinner = request.form['dinner']
-        todo = Todo(title=title, desc=desc, desc2=desc2, lunch = lunch, dinner = dinner)
-        db.session.add(todo)
-        db.session.commit()
-        return redirect("/home")
+        passw = Password.query.filter_by(room = room).first()
+        if(passw.Password == password):
+          title = request.form['room']
+          desc = request.form['desc']
+          desc2 = request.form['desc2']
+          lunch = request.form['lunch']
+          dinner = request.form['dinner']
+          todo = Todo(title=title, desc=desc, desc2=desc2, lunch = lunch, dinner = dinner)
+          db.session.add(todo)
+          db.session.commit()
+          return redirect("/home")
+          
+        
+        
 
         
     
@@ -109,4 +114,4 @@ def show(sno):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)  
+    app.run(debug=False, port=8000)  
