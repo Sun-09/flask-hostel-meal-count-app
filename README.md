@@ -23,20 +23,18 @@ vsCode (install from here - https://code.visualstudio.com/)
 
 # Basic Interface of the app 
 
-![Screenshot 2023-03-17 220551](https://user-images.githubusercontent.com/104966547/225965972-55b4e79d-9228-4169-9636-424ff1243cec.png)
 
-![Screenshot 2023-03-17 221152](https://user-images.githubusercontent.com/104966547/225966439-9cbbc5c9-5ec1-4be9-885b-75959ffe576e.png)
 
 
 # How to Use
 
 **It is a very easy to use web application with basic features -**
-1. First Set Your Room number & Password... You can do it with the help of admin.
-2. First we have to Enter Room number, Lunch and Dinner's meal count, Border's name for lunch and Dinner and submit.
+1. First Set Your Room number & Password (at /Register)... You can do it with the help of admin.
+2. First we have to Enter Room number, Lunch and Dinner's meal count, Border's name for lunch and Dinner and submit.**You have to enter password before submit...**
 3. Then it will be shown as a table.( Border's name will not shown)
-4. You can add as many number of meal count as you want.
-5. You can update and delete your existing meal count
-6. You can see border's list who are appling for meal(lunch & Dinner)
+4. You can add as many number of meal count as you want by clicking Update Button but you have to give password that you have set at step 1.
+5. You can delete your existing meal count by clicking delete button by entering your password..
+6. You can see border's list who are appling for meal(lunch & Dinner).
 
 # How it works
 
