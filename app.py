@@ -100,13 +100,18 @@ def update(sno):
 
 # delete Route
 
-@app.route("/delete/<int:sno>")
+@app.route("/delete/<int:sno>", methods = ['GET', 'POST'])
 def delete(sno):
-    todo = Todo.query.filter_by(sno = sno).first()
-    db.session.delete(todo)
-    db.session.commit()
-    return redirect("/home")
-
+    if request.method=='POST':
+        password = request.form['password']
+        todo = Todo.query.filter_by(sno = sno).first()
+        passw = Password.query.filter_by(room = todo.title).first()
+        if(password == passw.Password):
+            db.session.delete(todo)
+            db.session.commit()
+            return redirect("/home")
+    todo = Todo.query.filter_by(sno=sno).first()
+    return render_template('delete.html', todo = todo)
 # List Route
 
 @app.route("/list/<int:sno>", methods = ['GET', 'POST'])

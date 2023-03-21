@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title%} Home {% endblock title%}
+
+
+
+{% block body%}
+
+<div class="container">
+    <h1 style="text-align:center;padding:20px">Delete MealCount</h1>
+    <form action="/delete/{{todo.sno}}" method="POST">
+        
+        
+        <div class="form-group">
+        <label for="desc">Enter Your Password</label>
+        <input type="text" class="form-control" name="password" id="exampleInputPassword1" placeholder="Enter Password to Delete">
+        </div>
+        
+        <div id="liveAlertPlaceholder"></div>
+        <button type="submit" class="btn btn-primary" id="liveAlertBtn">Delete</button>
+    </form>
+
+  </div> 
+
+
+{% endblock body %}

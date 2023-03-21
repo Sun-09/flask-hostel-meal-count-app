@@ -18,7 +18,7 @@ Javascript
 
 # IDLE's used 
 
-vsCode (install from here - https://code.visualstudio.com/
+vsCode (install from here - https://code.visualstudio.com/)
 
 
 # Basic Interface of the app 
@@ -31,8 +31,8 @@ vsCode (install from here - https://code.visualstudio.com/
 # How to Use
 
 **It is a very easy to use web application with basic features -**
-1. First Set Your Room no & Password... You can do it with the help of admin..
-2. First we have to Enter Room no, Lunch and Dinner;s meal count, Border's name for lunch and Dinner and submit.
+1. First Set Your Room number & Password... You can do it with the help of admin.
+2. First we have to Enter Room number, Lunch and Dinner's meal count, Border's name for lunch and Dinner and submit.
 3. Then it will be shown as a table.( Border's name will not shown)
 4. You can add as many number of meal count as you want.
 5. You can update and delete your existing meal count
