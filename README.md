@@ -23,7 +23,11 @@ vsCode (install from here - https://code.visualstudio.com/)
 
 # Basic Interface of the app 
 
+![Login ](https://user-images.githubusercontent.com/104966547/226615884-f79bc666-9856-4ca6-a411-514749f3c57f.png)
 
+![Home](https://user-images.githubusercontent.com/104966547/226616049-d992885b-4a4b-4cde-8623-c9782b89fc12.png)
+
+![Delete](https://user-images.githubusercontent.com/104966547/226616232-82945ff8-0622-4b83-abdf-9268499c0e41.png)
 
 
 # How to Use
