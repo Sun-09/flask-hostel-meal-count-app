@@ -1,6 +1,11 @@
+# IMPORT LIBRARIES
+
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+
+
+# Creating App and Databse
 
 
 app = Flask(__name__)
@@ -8,6 +13,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
 app.config['SQLALCHEMY_TRACK_NOTIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+
+
+# There are two Classes - Todo and Password. Todo Saves all meal-count and Password saves all Password
 
 class Todo(db.Model):
     sno = db.Column(db.Integer, primary_key = True)
@@ -26,6 +34,9 @@ class Password(db.Model):
     sno = db.Column(db.Integer, primary_key = True)
     room = db.Column(db.String(500), nullable = True)
     Password = db.Column(db.String(500), nullable = True)
+
+
+# Register Page
 
 @app.route("/register", methods = ['GET', 'POST'])
 def register():
