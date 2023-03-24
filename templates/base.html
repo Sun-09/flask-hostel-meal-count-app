@@ -98,9 +98,10 @@
     <script>
       var loader = document.getElementById("preloader");
 
-      window.addEventListener("load", function(){
+      window.addEventListener("load", setTimeout(myFunc, 4000)) 
+      function myFunc(){
         loader.style.display= "none";
-      })
+      }
     </script>
 
 
